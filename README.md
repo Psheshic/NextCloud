@@ -41,7 +41,8 @@ FLUSH PRIVILEGES;
 ```
 wget https://download.nextcloud.com/server/releases/latest.zip
 
-unzip latest.zip```
+unzip latest.zip
+```
 
   
 
@@ -53,8 +54,7 @@ unzip latest.zip```
 
 ### Назначаем владельца и группу для папки Nextcloud
 
-```sudo chown -R www-data:www-data /var/www/nextcloud
-```
+```sudo chown -R www-data:www-data /var/www/nextcloud```
 
   
 
@@ -69,6 +69,7 @@ unzip latest.zip```
   
 
 ```
+
 <VirtualHost *:80>
 
 DocumentRoot /var/www/nextcloud/
@@ -86,7 +87,7 @@ AllowOverride All
 Options FollowSymLinks MultiViews
 
   
-  
+
 <IfModule mod_dav.c>
 
 Dav off
@@ -103,7 +104,7 @@ Dav off
 
 ### Активируем конфигурацию Nextcloud
 
-``` sudo a2ensite nextcloud.conf ```
+```sudo a2ensite nextcloud.conf```
 
   
 
@@ -120,8 +121,8 @@ sudo a2enmod env
 sudo a2enmod dir
 
 sudo a2enmod mime
- 
 
+```
 
 ### Перезапускаем службу Apache
 
@@ -149,9 +150,11 @@ sudo a2enmod mime
 
 ### Включаем модуль SSL для Apache
 
-```sudo a2enmod ssl
+```
+sudo a2enmod ssl
 
-sudo a2ensite default-ssl```
+sudo a2ensite default-ssl
+```
 
   
 
