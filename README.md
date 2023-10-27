@@ -8,6 +8,7 @@
 
 ```sudo apt install apache2 mariadb-server libapache2-mod-php php-gd php-mysql php-curl php-mbstring php-intl php-gmp php-bcmath php-xml php-imagick php-zip unzip```
 
+```sudo apt install certbot python3-certbot-apache```
   
 
 ### Запускаем MySQL
@@ -138,7 +139,7 @@ sudo a2enmod mime
 
 ### Получаем SSL-сертификат для нашего домена
 
-```sudo certbot --nginx  -d chat.my-domain.com```
+```sudo certbot --apache  -d chat.my-domain.com```
 
   
 
